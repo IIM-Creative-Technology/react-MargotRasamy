@@ -1,5 +1,6 @@
 import './assets/styles/main.scss';
 import LoaderSpinner from './components/LoaderSpinner'
+import LandingPage from './components/landingPage'
 
 function App() {
   const loading = false
@@ -10,7 +11,7 @@ function App() {
       
       { !!loading
         ? <LoaderSpinner/>
-        : <h1> OtaQuiz</h1>
+        : <LandingPage />
       }
 
     </div>
