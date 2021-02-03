@@ -6,11 +6,22 @@
 @import 'components/loader-spinner.scss';
 
 .App {
-    background-color: var(--colorBlueVeryLight);
+    background: url('../images/backgrounds/att.jpg');
+    background-size: cover;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: var(--colorMainBlack);
+    opacity: 0.5s;
+}
+
+html::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--colorPrimaryVeryLight); 
+  }
+
+html::-webkit-scrollbar-thumb {
+      background: var(--colorPrimaryLight); 
 }

@@ -5,13 +5,14 @@ function App() {
   const loading = false
   return (
     <div className="App">
-      <header className="App-header">
-        { !!loading
-         ? <LoaderSpinner/>
-         : null
-        }
+      {/* header to put here */}
 
-      </header>
+      
+      { !!loading
+        ? <LoaderSpinner/>
+        : <h1> OtaQuiz</h1>
+      }
+
     </div>
   );
 }
