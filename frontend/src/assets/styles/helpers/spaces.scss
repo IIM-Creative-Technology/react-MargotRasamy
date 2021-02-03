@@ -1,0 +1,22 @@
+:root {
+    @import "./medias.scss";
+    
+    --marginsLayout: 30px;
+    --gutterWidth: 24px;
+    --gridColumns: repeat(12, 1fr);
+    --gridRows : 65px auto;
+    --iconSize : 18px;
+    --spaceXS: 4px;
+    --spaceS: 8px;
+    --spaceM: 16px;
+    --spaceML: 24px;
+    --spaceL: 30px;
+    --spaceXL: 64px;
+
+    @include small {
+        --marginsLayout: 16px;
+        --gutterWidth: 10px;
+        --gridColumns: repeat(4, 1fr);
+        --gridRows : 65px 65px auto;
+    }
+}

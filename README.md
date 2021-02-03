@@ -1,5 +1,5 @@
 # Quiz bot
-## A MERN Stack (Mongo - Express - Reactjs - Nodejs) quiz app by Margot Rasamy.
+## A ERN Stack (Express - Reactjs - Nodejs) quiz app by Margot Rasamy.
 
 ### Install the dependencies
 ```console
