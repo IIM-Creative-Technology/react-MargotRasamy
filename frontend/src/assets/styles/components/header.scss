@@ -1,5 +1,5 @@
 .header {
-    background: rgba(14,14,14,0.6);
+    background: rgba(14,14,14,0.3);
     position: sticky;
     position: -webkit-sticky;
     height: 10vh;
@@ -12,11 +12,22 @@
     justify-content: space-between;
     align-items: center;
     .nav-link {
+        text-align: center;
         color: var(--colorWhite);
         text-decoration: none;
         font-size: 18px;
+        padding: var(--spaceS) var(--spaceM);
+        border-radius: var(--borderRadiusLarge);
         &:hover {
-            color: var(--colorPrimaryVeryLight);
+            color: var(--colorSecondaryVeryLight);
+        }
+        &.cta {
+            border: 2.5px solid var(--colorSecondary);
+            padding: var(--spaceS) var(--spaceL);
+            &:hover {
+                color: var(--colorWhite);
+                background-color: var(--colorSecondary);
+            }
         }
     }
 }
