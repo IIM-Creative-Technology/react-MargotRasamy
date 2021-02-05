@@ -2,25 +2,12 @@
 @import 'helpers/medias.scss';
 @import 'helpers/misc.scss';
 @import 'helpers/spaces.scss';
+@import 'helpers/fonts.scss';
 
 @import 'components/loader-spinner.scss';
-
-.hero {
-  background:linear-gradient(0deg, rgba(#0e0e0e, 1), rgba(208, 6, 23, 0.3)), url('../images/backgrounds/attt.jpg');
-  background-size: cover;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  opacity: 0.5s;
-}
-
-.landing-page {
-  height: 200vh;
-  background-color: var(--colorMainBlack);
-}
+@import 'components/header.scss';
+@import 'components/landingPage/hero.scss';
+@import 'components/landingPage/landing-page.scss';
 
 html::-webkit-scrollbar {
   width: 10px;
@@ -29,4 +16,16 @@ html::-webkit-scrollbar {
 
 html::-webkit-scrollbar-thumb {
   background: var(--colorSecondary); 
+}
+
+html {
+  margin:0;
+  padding: 0;
+}
+
+.App {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: var(--colorMainBlack);
 }

@@ -1,0 +1,19 @@
+.hero {
+    background:linear-gradient(0deg, rgba(#0e0e0e, 1), rgba(208, 6, 23, 0.1)), url('../../../images/backgrounds/shingeki.jpg');
+    background-size: cover;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--colorWhite);
+    opacity: 0.5s;
+    &-caption {
+        background-color: rgba(45, 0, 224, 0.442);
+        padding: var(--spaceXL);
+        margin: auto 30vw;
+        @include small {
+            margin: auto 10vw;
+        }
+    }
+}

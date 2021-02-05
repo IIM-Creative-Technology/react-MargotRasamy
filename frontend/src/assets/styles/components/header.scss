@@ -1,0 +1,22 @@
+.header {
+    background: rgba(14,14,14,0.6);
+    position: sticky;
+    position: -webkit-sticky;
+    height: 10vh;
+    top: 0;
+    left:0;
+    width: 100%;
+    padding: var(--spaceL);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .nav-link {
+        color: var(--colorWhite);
+        text-decoration: none;
+        font-size: 18px;
+        &:hover {
+            color: var(--colorPrimaryVeryLight);
+        }
+    }
+}
