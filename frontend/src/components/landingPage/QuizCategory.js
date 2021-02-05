@@ -1,4 +1,4 @@
-// import Image from '../../assets/images/backgrounds/attack.png'
+import { NavLink } from 'react-router-dom'
 
 function QuizCategory({ quiz }) {
     const backgroundImageImport = (imageToLoad) => {
@@ -8,15 +8,15 @@ function QuizCategory({ quiz }) {
     } 
 
     return (
-    <a href='/' className="quiz-category"
+    <NavLink exact to={`quiz/${quiz.path}`} className="quiz-category"
     style={backgroundImageImport(quiz.image)}>
         <div className="content">
-          <h3>{ quiz.title }</h3>   
-            <p>{ quiz.caption }</p>  
+            <h3>{ quiz.title }</h3>   
+            <p>{ quiz.caption }</p>
         </div>
         
         <div className="overlay"></div>
-    </a>
+    </NavLink>    
     );
 }
 
