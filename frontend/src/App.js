@@ -21,7 +21,7 @@ function App() {
         } */}
         <Switch>
           <Route exact path="/challenge-expert">
-            <QuizPage />
+            <LandingPage />
           </Route>
           <Route path="/quiz/:manga" component={QuizPage}>
           </Route>
