@@ -1,10 +1,10 @@
 :root {
     @import "./medias.scss";
     
-    --marginsLayout: 30px;
+    --marginsLayout: 2vw;
     --gutterWidth: 24px;
-    --gridColumns: repeat(12, 1fr);
-    --gridRows : 65px auto;
+    --gridColumns: repeat(4, 1fr);
+    --gridGap : 10px;
     --iconSize : 18px;
     --spaceXS: 4px;
     --spaceS: 8px;
@@ -13,10 +13,15 @@
     --spaceL: 30px;
     --spaceXL: 64px;
 
-    @include small {
-        --marginsLayout: 16px;
-        --gutterWidth: 10px;
-        --gridColumns: repeat(4, 1fr);
-        --gridRows : 65px 65px auto;
+    @include large {
+        --marginsLayout: 20vw;
+        --gridColumns: repeat(6, 1fr);
     }
+    @include small {
+        --marginsLayout: 5vw;
+        --gutterWidth: 10px;
+        --gridColumns: repeat(2, 1fr);
+    }
+
+    
 }

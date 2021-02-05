@@ -1,8 +1,8 @@
 .header {
-    background: rgba(14,14,14,0.3);
+    background: rgba(14, 14, 14, 0.775);
     position: sticky;
     position: -webkit-sticky;
-    height: 10vh;
+    z-index: 9;
     top: 0;
     left:0;
     width: 100%;
@@ -30,4 +30,7 @@
             }
         }
     }
+}
+.hoverClass {
+    background-color: var(--colorSecondary) !important;
 }

@@ -1,0 +1,7 @@
+.section-quiz {
+    margin: var(--marginsLayout);
+    display: grid;
+    grid-template-columns: var(--gridColumns);
+    
+    grid-gap: var(--gridGap);
+}

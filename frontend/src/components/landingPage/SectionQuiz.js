@@ -1,14 +1,36 @@
-function Hero() {
+import QuizCategory from './QuizCategory'
+function SectionQuiz() {
+    const quizDatas = [
+      {
+        title: 'L\'attaque des titans',
+        caption: 'Incollable sur Shingeki no Kyojin ? Tente ta chance !',
+        image: 'shin'
+      },
+      {
+        title: 'Fruits basket',
+        caption: 'Fan des shojo classiques ? Tente ta chance !',
+        image: 'fruits-basket'
+      },
+      {
+        title: 'Code geass',
+        caption: 'Prêt à défier les britanniens ? Yes, my lord !',
+        image: 'code-geass'
+      },
+      {
+        title: 'Death note',
+        caption: 'Réponds aux questions ou ton nom risque d\'y être inscrit !',
+        image: 'death-note'
+      },
+      
+    ]
+
     return (
-      <div className="hero">
-        <div className="hero-caption">
-          <h1>OtaKuiz</h1>
-          <p>Challenge tes connaissances de Otaku avec OtaKuiz. 
-            Crée tes propres Quiz et défie tous tes potes. Fait monter ton score dans le classement des Top 5 Best otakus pour remporter un prix d'une valeur de 800 euros !
-          </p> 
-        </div> 
+      <div className="section-quiz">
+        { quizDatas &&
+            quizDatas.map((quizData, index) => { return <QuizCategory key={index} quiz={quizData} /> })
+        }
       </div>
     );
   }
   
-  export default Hero;
+  export default SectionQuiz;
