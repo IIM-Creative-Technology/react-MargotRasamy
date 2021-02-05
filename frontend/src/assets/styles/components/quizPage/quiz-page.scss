@@ -1,3 +1,25 @@
 .quiz-page {
-    background-color: pink
+   flex:1;
+   display: flex;
+   flex-direction: column; 
+   align-items: center;
+   background-color: rgba(rgb(6, 6, 128), 0.1);
+   padding: var(--marginsLayout);
+   h2 {
+    text-align: center;
+    font-size: 36px;
+   }
+   .question {
+        padding: var(--spaceL);
+   }
+   .responses-list {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-gap: var(--gridGap);
+       .response {
+           color: var(--colorMainBlack);
+           padding: 40px;
+           background-color: var(--colorSecondaryVeryLight);
+       }
+   }
 }

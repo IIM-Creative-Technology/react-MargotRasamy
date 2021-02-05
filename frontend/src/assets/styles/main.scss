@@ -36,4 +36,6 @@ html {
   min-height: 100vh;
   position: relative;
   background-color: var(--colorMainBlack);
+  display: flex;
+  flex-direction: column;
 }
