@@ -3,12 +3,14 @@
 @import 'helpers/misc.scss';
 @import 'helpers/spaces.scss';
 @import 'helpers/fonts.scss';
+@import 'helpers/reset.scss';
 
 @import 'components/loader-spinner.scss';
 @import 'components/header.scss';
 @import 'components/landingPage/hero.scss';
 @import 'components/landingPage/landing-page.scss';
 @import 'components/landingPage/section-quiz.scss';
+@import 'components/landingPage/quiz-list.scss';
 @import 'components/landingPage/quiz-category.scss';
 
 html::-webkit-scrollbar {

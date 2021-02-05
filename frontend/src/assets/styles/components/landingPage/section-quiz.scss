@@ -1,7 +1,5 @@
 .section-quiz {
-    margin: var(--marginsLayout);
-    display: grid;
-    grid-template-columns: var(--gridColumns);
-    
-    grid-gap: var(--gridGap);
+    min-height: 100vh;
+    background:linear-gradient(0deg, rgba(#0e0e0e, 0.7), rgba(#0e0e0e, 1)), url('../../../images/backgrounds/shing.jpg');
+    background-size: cover;
 }
