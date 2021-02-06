@@ -1,9 +1,15 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+const cors = require('cors');
+app.use(cors());
+app.use(bodyParser.json());
 
 // File reader
 const fs = require("fs");
 app.use(express.json());
+
+
 
 // Server running on port 1234
 const PORT = 1234;
@@ -36,6 +42,16 @@ const writeFile = (fileName, data) => {
     });
 };
 
+app.get('/hello', function (req, res) {
+    readFile(quizListFile, "utf8").then((data) => {
+        res.send(JSON.parse(data))
+    }).catch((err) => {
+        console.log(err)
+        res.send('Error', err)
+    })
+   
+})
+
 const quizListFile = "./datas/quizList.json"
 
 // const quizList = async function promiseReadFile(){
@@ -50,12 +66,8 @@ const quizListFile = "./datas/quizList.json"
 //     }  
 // }
 
-var quizList
-readFile(quizListFile, "utf8").then((data) => {
-    quizList = JSON.parse(data);
-}).catch((err) => {
-    console.log(err)
-})
+
+
 
 // App listening on port chosen
 app.listen(PORT, function () {

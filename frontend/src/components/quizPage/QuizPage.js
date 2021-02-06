@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class QuizPage extends Component {
     constructor(props) {
@@ -40,6 +41,7 @@ class QuizPage extends Component {
         
         const handleSubmit = (e) => {
             e.preventDefault()
+            axios.get('http://localhost:1234/hello').then(res => console.log(res.data));
             const newQuizDetails = this.state.quizDetails
             newQuizDetails[0].question = "hello working"
             this.setState({quizDetails : newQuizDetails});
