@@ -42,6 +42,9 @@ const writeFile = (fileName, data) => {
     });
 };
 
+const quizListFile = "./datas/quizList.json"
+const quizDatasFile = "./datas/quizDatas.json"
+
 // GET the quiz list endpoint
 app.get('/quiz-list', function (req, res) {
     readFile(quizListFile, "utf8").then((data) => {
@@ -49,11 +52,25 @@ app.get('/quiz-list', function (req, res) {
     }).catch((err) => {
         console.log(err)
         res.send('Error', err)
-    })
-   
+    })   
 })
 
-const quizListFile = "./datas/quizList.json"
+// GET the quiz details endpoint 
+// { label :  }
+app.get('/quiz-details/:label', function (req, res) {    
+    readFile(quizDatasFile, "utf8").then((data) => {
+        const quizDatas = JSON.parse(data)
+        const quiz = quizDatas.find((quizData) => 
+            quizData.quizLabel === req.params.label
+        )
+        res.send(quiz)
+    }).catch((err) => {
+        console.log(err)
+        res.send('Error', err)
+    }) 
+})
+
+
 
 // const quizList = async function promiseReadFile(){
 //     try{ 

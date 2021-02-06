@@ -1,64 +1,76 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'
+import LoaderSpinner from '../LoaderSpinner'
 
-class QuizPage extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            quizDetails: [
-                {
-                    question: 'Pour quelle raison Eren pleure-t-il au début du manga/animé ?',
-                    answer: 'B',
-                    responses: [
-                        {
-                            label: 'A',
-                            response: 'Il vient de se battre avec des garçons du même âge.'
-                        },
-                        {
-                            label: 'B',
-                            response: 'Il a fait un cauchemar.'
-                        },
-                        {
-                            label: 'C',
-                            response: 'Mikasa vient de lui mettre une râclée.'
-                        },
-                        {
-                            label: 'D',
-                            response: 'Ses parents viennent de le remettre en place.'
-                        }
-                    ]
-                }
-            ]
-        };
+function QuizPage({match}) {
+    const quizParams = match.params.manga
+    const [quizDatas, setQuizDatas] = useState(null);
+    const [quizQuestionIndex, setQuizQuestionIndex] = useState(0);
+    const [userResponses, setUserResponses] = useState([]);
+
+    useEffect(() => {
+        axios.get(`http://localhost:1234/quiz-details/${quizParams}`).then(res => {
+            setQuizDatas(res.data)
+            console.log(res.data)
+        })
+    }, []);
+
+    // const handleSubmit = (e) => {
+    //     e.preventDefault()
+    //     setQuizQuestionIndex(quizQuestionIndex + 1)
+    //     userResponses.push()
+    // }
+
+    const handleClick = (e) => {
+        e.preventDefault()
+        setQuizQuestionIndex(quizQuestionIndex + 1)
+        userResponses.push()
     }
-    render() {
-        const quizParams = this.props.match.params.manga
-        const quizName = (quizParams === 'code-geass') ? 'Code Geass' : 'yo'
 
-        // const handleChange = () => {
-        //     this.setState({question: 'Hello'});
-        // }
-        
-        const handleSubmit = (e) => {
-            e.preventDefault()
-            
-            const newQuizDetails = this.state.quizDetails
-            newQuizDetails[0].question = "hello working"
-            this.setState({quizDetails : newQuizDetails});
+    const isLoaderSpinnerWrapper = () => {
+        return !quizDatas ? 'loader-wrapper' : null
+    }
+
+    const quizIsNotDone = () => {
+        return quizQuestionIndex < quizDatas.quizDetails.length
+    }
+
+    function randomArrayShuffle(array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+        while (0 !== currentIndex) {
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+          temporaryValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
         }
-
-        return (
-            <div className="quiz-page">
-                <h2>{quizName}</h2>
-                <div className="question">{this.state.quizDetails[0].question}</div>
-                <form onSubmit={(e) => handleSubmit(e)} className="responses-list">
-                    <button type="submit" className="response">Il vient de se battre avec des garçons du même âge.</button>
-                    <button type="submit" className="response">Il a fait un cauchemar</button>
-                    <button type="submit" className="response">Mikasa vient de lui mettre une râclée</button>
-                    <button type="submit" className="response">Ses parents viennent de le remettre en place</button>
-                </form>
-            </div>
-        );
+        return array;
     }
+
+    return (
+    <div className={`quiz-page ${isLoaderSpinnerWrapper()}`}>
+        { !quizDatas
+            ? <LoaderSpinner />
+            : (quizIsNotDone())
+            ? <>
+                <h2>{quizDatas.quizName}</h2>
+                <div className="question">
+                    { quizDatas.quizDetails[quizQuestionIndex].question }
+                </div>
+                <form  className="responses-list">
+                    {
+                        randomArrayShuffle(quizDatas.quizDetails[quizQuestionIndex].responses).map((responseCard, index) => {
+                            return <button type="button" onClick={(e) => {handleClick(e)}} key={index} className="response">{responseCard.response}</button>
+                        })
+                    }
+                </form>
+            </>
+            : <>
+                <h1>Quiz done</h1>
+            </>
+        }          
+    </div>
+    );
 }
 
 export default QuizPage;

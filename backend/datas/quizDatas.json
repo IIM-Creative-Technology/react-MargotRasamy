@@ -24,6 +24,50 @@
                         "response": "Ses parents viennent de le remettre en place."
                     }
                 ]
+            },
+            {
+                "question": "Comment se nomment les parents d'Eren ? (traduction officielle)",
+                "answer": "A",
+                "responses": [
+                    {
+                        "label": "A",
+                        "response": "Carla et Grisha"
+                    },
+                    {
+                        "label": "B",
+                        "response": "Lara et Grisha"
+                    },
+                    {
+                        "label": "C",
+                        "response": "Carla et Guisha"
+                    },
+                    {
+                        "label": "D",
+                        "response": "Lara et Guisha"
+                    }
+                ]
+            },
+            {
+                "question": "Quel est le rêve d'Armin ?",
+                "answer": "D",
+                "responses": [
+                    {
+                        "label": "A",
+                        "response": "Voir les monts enneigés"
+                    },
+                    {
+                        "label": "B",
+                        "response": "Trouver des vestiges de civilisations"
+                    },
+                    {
+                        "label": "C",
+                        "response": "Découvrir des espèces non connues de l'humanité"
+                    },
+                    {
+                        "label": "D",
+                        "response": "Voir la mer"
+                    }
+                ]
             }
         ]
     },
@@ -32,7 +76,7 @@
         "quizLabel": "fruits-basket",
         "quizDetails": [
             {
-                "question": "Pour quelle raison Eren pleure-t-il au début du manga/animé ?",
+                "question": "Qui est Tohru Honda ?",
                 "answer": "B",
                 "responses": [
                     {
