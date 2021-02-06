@@ -1,5 +1,5 @@
 .hero {
-    background:linear-gradient(0deg, rgba(#0e0e0e, 1), rgba(208, 6, 50, 0.319)), url('../../../images/backgrounds/shingeki.jpg');
+    background: linear-gradient(0deg, rgba(#0e0e0e, 1), rgba(208, 6, 50, 0.319)), url('../../../images/backgrounds/shingeki.jpg');
     background-size: cover;
     min-height: 90vh;
     display: flex;
@@ -8,14 +8,17 @@
     justify-content: center;
     color: var(--colorWhite);
     opacity: 0.5s;
+
     &-caption {
         background-color: rgba(208, 6, 50, 0.483);
         padding: var(--spaceXL);
         margin: auto 30vw;
+
         @include small {
             margin: auto 10vw;
             padding: var(--spaceL);
         }
+        
         @include mobile {
             margin: auto 5vw;
             padding: var(--spaceM);
