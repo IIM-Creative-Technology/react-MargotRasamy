@@ -3,7 +3,7 @@
    display: flex;
    flex-direction: column; 
    align-items: center;
-   background-color: rgba(rgb(6, 6, 128), 0.1);
+   background: linear-gradient(rgba(rgb(46, 46, 132), 0.4), rgba(rgb(6, 6, 128), 0.2));
    padding: var(--marginsLayout);
    h2 {
     text-align: center;
@@ -17,9 +17,16 @@
         grid-template-columns: repeat(2, auto);
         grid-gap: var(--gridGap);
        .response {
+           border:none;
+           cursor: pointer;
+           outline: none;
            color: var(--colorMainBlack);
            padding: 40px;
-           background-color: var(--colorSecondaryVeryLight);
+           border-radius: var(--borderRadiusSmall);
+           background-color: var(--colorPrimaryVeryLight);
+           &:hover {
+            background-color: #f9faff;
+           }
        }
    }
 }

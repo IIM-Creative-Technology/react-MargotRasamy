@@ -1,7 +1,7 @@
 import './assets/styles/main.scss';
 import LoaderSpinner from './components/LoaderSpinner'
-import LandingPage from './components/landingPage'
-import QuizPage from './components/quizPage'
+import LandingPage from './components/landingPage/LandingPage'
+import QuizPage from './components/quizPage/QuizPage'
 import Header from './components/Header'
 import React, { useRef } from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
