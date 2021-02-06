@@ -2,7 +2,7 @@
     @import "./medias.scss";
     --marginsLayout: 2vw;
     --gutterWidth: 24px;
-    --gridColumns: repeat(4, auto);
+    --gridColumns: repeat(4, 1fr);
     --gridGap : 15px;
     --iconSize : 18px;
     --spaceXS: 4px;
@@ -14,17 +14,17 @@
 
     @include large {
         --marginsLayout: 20vw;
-        --gridColumns: repeat(6, auto);
+        --gridColumns: repeat(6, 1fr);
         --gridGap : 20px;
     }
     @include small {
         --marginsLayout: 5vw;
         --gutterWidth: 10px;
-        --gridColumns: repeat(2, auto);
+        --gridColumns: repeat(2, 1fr);
         --gridGap : 10px;
     }
     @include mobile {
-        --gridColumns: repeat(1, auto);
+        --gridColumns: repeat(1, 1fr);
     }
 
     

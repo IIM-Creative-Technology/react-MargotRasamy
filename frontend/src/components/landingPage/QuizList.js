@@ -1,40 +1,31 @@
+import React, { useState, useEffect } from 'react';
 import QuizCategory from './QuizCategory'
-function QuizList() {
-    const quizDatas = [
-      {
-        title: 'L\'attaque des titans',
-        caption: 'Incollable sur Shingeki no Kyojin ? Tente ta chance !',
-        image: 'shin',
-        path: 'shingeki-no-kyojin'
-      },
-      {
-        title: 'Fruits basket',
-        caption: 'Fan des shojo classiques ? Tente ta chance !',
-        image: 'fruits-basket',
-        path: 'fruits-basket'
-      },
-      {
-        title: 'Code geass',
-        caption: 'Prêt à défier les britanniens ? Yes, my lord !',
-        image: 'code-geass',
-        path: 'code-geass'
-      },
-      {
-        title: 'Death note',
-        caption: 'Réponds aux questions ou ton nom risque d\'y être inscrit !',
-        image: 'death-note',
-        path: 'death-note'
-      },
-      
-    ]
+import axios from 'axios'
+import LoaderSpinner from '../LoaderSpinner'
 
-    return (
-      <div className="quiz-list">
-        { quizDatas &&
-            quizDatas.map((quizData, index) => { return <QuizCategory key={index} quiz={quizData} /> })
-        }
-      </div>
-    );
+function QuizList() {
+  const [quizList, setQuizList] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    axios.get('http://localhost:1234/quiz-list').then(res => {
+      setQuizList(res.data)
+      setLoading(false)
+    })
+  });
+
+  const isLoaderSpinnerWrapper = (loading) => {
+    return loading ? 'loader-wrapper' : null
   }
+
+  return (
+    <div className={`quiz-list ${isLoaderSpinnerWrapper(loading)}`}>
+      { loading && !quizList
+          ? <LoaderSpinner />
+          : quizList.map((quizData, index) => { return <QuizCategory key={index} quiz={quizData} /> })
+        }
+    </div>
+  );
+}
   
-  export default QuizList;
+export default QuizList;

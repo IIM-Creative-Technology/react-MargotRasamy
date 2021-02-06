@@ -11,7 +11,7 @@ function QuizCategory({ quiz }) {
     <NavLink exact to={`quiz/${quiz.path}`} className="quiz-category"
     style={backgroundImageImport(quiz.image)}>
         <div className="content">
-            <h3>{ quiz.title }</h3>   
+            <h3>{ quiz.quizName }</h3>   
             <p>{ quiz.caption }</p>
         </div>
         

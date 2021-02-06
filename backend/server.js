@@ -42,7 +42,8 @@ const writeFile = (fileName, data) => {
     });
 };
 
-app.get('/hello', function (req, res) {
+// GET the quiz list endpoint
+app.get('/quiz-list', function (req, res) {
     readFile(quizListFile, "utf8").then((data) => {
         res.send(JSON.parse(data))
     }).catch((err) => {
