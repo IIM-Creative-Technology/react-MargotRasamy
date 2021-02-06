@@ -47,6 +47,10 @@ function QuizPage({match}) {
         return array;
     }
 
+    const submitLastButtonType = () => {
+        return quizQuestionIndex === quizDatas.quizDetails.length - 1 ? 'submit' : 'button'
+    }
+
     return (
     <div className={`quiz-page ${isLoaderSpinnerWrapper()}`}>
         { !quizDatas
@@ -60,7 +64,7 @@ function QuizPage({match}) {
                 <form  className="responses-list">
                     {
                         randomArrayShuffle(quizDatas.quizDetails[quizQuestionIndex].responses).map((responseCard, index) => {
-                            return <button type="button" onClick={(e) => {handleClick(e)}} key={index} className="response">{responseCard.response}</button>
+                            return <button type={submitLastButtonType()} onClick={(e) => {handleClick(e)}} key={index} className="response">{responseCard.response}</button>
                         })
                     }
                 </form>
