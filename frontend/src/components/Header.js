@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link';
 import React, { useEffect, useRef, useState } from 'react';
 
 function Header() {
@@ -18,8 +18,8 @@ function Header() {
 
     return (
     <header className="header" ref={headerElement}>
-        <NavLink to="/" activeClassName="selected" className="nav-link" exact>OtaKuiz</NavLink>
-        <NavLink to="/challenge-expert" activeClassName="selected" className={`nav-link cta ${hoverClass}`}  exact>Le challenge expert</NavLink>
+        <Link to="/" className="nav-link" exact>OtaKuiz</Link>
+        <Link to="#quiz-list" className={`nav-link cta ${hoverClass}`} exact>Le challenge expert</Link>
     </header>
     );
 }

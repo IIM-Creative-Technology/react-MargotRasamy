@@ -13,11 +13,11 @@ function QuizList() {
   }, []);
 
   const isLoaderSpinnerWrapper = () => {
-    return !quizList ? 'loader-wrapper' : null
+    return !quizList ? 'loader-wrapper' : ''
   }
 
   return (
-    <div className={`quiz-list ${isLoaderSpinnerWrapper()}`}>
+    <div id="quiz-list" className={`quiz-list ${isLoaderSpinnerWrapper()}`}>
       { !quizList
           ? <LoaderSpinner />
           : quizList.map((quizData, index) => { return <QuizCategory key={index} quiz={quizData} /> })

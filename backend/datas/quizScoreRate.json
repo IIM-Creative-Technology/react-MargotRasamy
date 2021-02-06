@@ -1,0 +1,27 @@
+[
+    {
+        "assessment": "Mauvais score ! Pas top, il semble que tu n'es pas encore prêt à être appeler Otaku.",
+        "scoreMin": 0,
+        "scoreMax": 25
+    },
+    {
+        "assessment": "Peut mieux faire ! C'est limite-limite là. Retourne lire des mangas et 5 saisons d'animés.",
+        "scoreMin": 26,
+        "scoreMax": 50
+    },
+    {
+        "assessment": "Pas mal ! Tu as très bien joué, tu pourrais encore lire quelques mangas pour perfectionner ton expertise.",
+        "scoreMin": 51,
+        "scoreMax": 75
+    },
+    {
+        "assessment": "Excellent ! Tu as prouvé que tu étais un vrai otaku dans l'âme ! N'hésite pas à partager ton score avec tes potes.",
+        "scoreMin": 76,
+        "scoreMax": 85
+    },
+    {
+        "assessment": "Félicitations ! Tu fais partie des 20 meilleurs otakus de notre classement ! Ton cadeau spécial d'une valeur de 800€ te sera bientôt envoyé dans ta boîte mail.",
+        "scoreMin": 86,
+        "scoreMax": 100
+    }
+]

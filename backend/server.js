@@ -44,6 +44,7 @@ const writeFile = (fileName, data) => {
 
 const quizListFile = "./datas/quizList.json"
 const quizDatasFile = "./datas/quizDatas.json"
+const quizScoreRate = "./datas/quizScoreRate.json"
 
 // GET the quiz list endpoint
 app.get('/quiz-list', function (req, res) {
@@ -56,7 +57,6 @@ app.get('/quiz-list', function (req, res) {
 })
 
 // GET the quiz details endpoint 
-// { label :  }
 app.get('/quiz-details/:label', function (req, res) {    
     readFile(quizDatasFile, "utf8").then((data) => {
         const quizDatas = JSON.parse(data)
@@ -64,6 +64,20 @@ app.get('/quiz-details/:label', function (req, res) {
             quizData.quizLabel === req.params.label
         )
         res.send(quiz)
+    }).catch((err) => {
+        console.log(err)
+        res.send('Error', err)
+    }) 
+})
+
+// GET the quiz score assessment rate endpoint 
+app.post('/quiz-score', function (req, res) {    
+    readFile(quizScoreRate, "utf8").then((data) => {
+        const quizScores = JSON.parse(data)
+        const quizAssessementData = quizScores.find((quizScore) => 
+            quizScore.scoreMin <= req.body.finalScore && quizScore.scoreMax >= req.body.finalScore
+        )
+        res.send(quizAssessementData)
     }).catch((err) => {
         console.log(err)
         res.send('Error', err)
@@ -83,8 +97,6 @@ app.get('/quiz-details/:label', function (req, res) {
 //         process.exit(1);
 //     }  
 // }
-
-
 
 
 // App listening on port chosen

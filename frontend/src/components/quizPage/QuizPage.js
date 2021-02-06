@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
+import QuizScore from './QuizScore'
 import axios from 'axios'
 import LoaderSpinner from '../LoaderSpinner'
 
@@ -7,6 +8,7 @@ function QuizPage({match}) {
     const [quizDatas, setQuizDatas] = useState(null);
     const [quizQuestionIndex, setQuizQuestionIndex] = useState(0);
     const [userResponses, setUserResponses] = useState([]);
+    const [userFinalScore, setUserScore] = useState(0);
 
     useEffect(() => {
         axios.get(`http://localhost:1234/quiz-details/${quizParams}`).then(res => {
@@ -15,20 +17,20 @@ function QuizPage({match}) {
         })
     }, []);
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault()
-    //     setQuizQuestionIndex(quizQuestionIndex + 1)
-    //     userResponses.push()
-    // }
-
-    const handleClick = (e) => {
+    const handleClick = (e, userChoice, rightAnswer) => {
         e.preventDefault()
-        setQuizQuestionIndex(quizQuestionIndex + 1)
-        userResponses.push()
+        if (quizIsNotDone()) {
+            setQuizQuestionIndex(quizQuestionIndex + 1)
+            userResponses.push(userChoice) // TODO change use setUserResponses
+            console.log(userResponses)
+            if (userChoice.label === rightAnswer) {
+                setUserScore(userFinalScore + 1)   
+            }
+        }
     }
 
     const isLoaderSpinnerWrapper = () => {
-        return !quizDatas ? 'loader-wrapper' : null
+        return !quizDatas ? 'loader-wrapper' : ''
     }
 
     const quizIsNotDone = () => {
@@ -47,10 +49,6 @@ function QuizPage({match}) {
         return array;
     }
 
-    const submitLastButtonType = () => {
-        return quizQuestionIndex === quizDatas.quizDetails.length - 1 ? 'submit' : 'button'
-    }
-
     return (
     <div className={`quiz-page ${isLoaderSpinnerWrapper()}`}>
         { !quizDatas
@@ -61,17 +59,15 @@ function QuizPage({match}) {
                 <div className="question">
                     { quizDatas.quizDetails[quizQuestionIndex].question }
                 </div>
-                <form  className="responses-list">
+                <form className="responses-list">
                     {
                         randomArrayShuffle(quizDatas.quizDetails[quizQuestionIndex].responses).map((responseCard, index) => {
-                            return <button type={submitLastButtonType()} onClick={(e) => {handleClick(e)}} key={index} className="response">{responseCard.response}</button>
+                            return <button type="button" onClick={(e) => handleClick(e, responseCard, quizDatas.quizDetails[quizQuestionIndex].answer)} key={index} className="response">{responseCard.response}</button>
                         })
                     }
                 </form>
             </>
-            : <>
-                <h1>Quiz done</h1>
-            </>
+            : <QuizScore userScore={userFinalScore} scoreRatio={quizDatas.quizDetails.length} />
         }          
     </div>
     );
