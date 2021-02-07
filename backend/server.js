@@ -87,26 +87,30 @@ app.post('/quiz/create', async function (req, res) {
     // Quiz datas
     const newQuizDetails = req.body.quizDetails
 
-    readFile(quizListFile, "utf8").then((data) => {
-        const oldQuizList = JSON.parse(data)
-        const newQuizList = [...oldQuizList, newQuizCategory]
-        writeFile(quizListFile, JSON.stringify(newQuizList, null, 2))
-
-        // Create quiz details
-        readFile(quizDatasFile, "utf8").then((data) => {
-            const oldQuizDatas = JSON.parse(data)
-            const newQuizDatas = [...oldQuizDatas, newQuizDetails]
-            writeFile(quizDatasFile, JSON.stringify(newQuizDatas, null, 2))
-            res.send(`Nouveau quiz créé avec succès. Liste de quiz à jour : ${newQuizList, newQuizDatas}`)
+    // Check if user has sent the two elements expected first
+    if (newQuizCategory && newQuizDetails) {
+        readFile(quizListFile, "utf8").then((data) => {
+            const oldQuizList = JSON.parse(data)
+            const newQuizList = [...oldQuizList, newQuizCategory]
+            writeFile(quizListFile, JSON.stringify(newQuizList, null, 2))
+    
+            // Create quiz details
+            readFile(quizDatasFile, "utf8").then((data) => {
+                const oldQuizDatas = JSON.parse(data)
+                const newQuizDatas = [...oldQuizDatas, newQuizDetails]
+                writeFile(quizDatasFile, JSON.stringify(newQuizDatas, null, 2))
+                res.send(`${newQuizList, newQuizDatas}`)
+            }).catch((err) => {
+                console.log(err)
+                res.send('Error', err)
+            })
         }).catch((err) => {
             console.log(err)
             res.send('Error', err)
-        })
-
-    }).catch((err) => {
-        console.log(err)
-        res.send('Error', err)
-    })   
+        })   
+    } else {
+        res.send('Désolé, vos données envoyées ne correspondent pas aux standards requis pour créer un quiz. Veuillez à envoyer un objet avec les 2 propriétés : quizCategory et quizDetails')
+    }
 })
 
 
