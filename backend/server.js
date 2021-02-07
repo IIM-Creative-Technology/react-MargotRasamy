@@ -1,15 +1,11 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
 const cors = require('cors');
 app.use(cors());
-app.use(bodyParser.json());
 
 // File reader
 const fs = require("fs");
 app.use(express.json());
-
-
 
 // Server running on port 1234
 const PORT = 1234;
@@ -86,19 +82,32 @@ app.post('/quiz-score', function (req, res) {
 
 // POST create a quiz
 app.post('/quiz/create', async function (req, res) { 
+    // Quiz category
     const newQuizCategory = req.body.quizCategory
+    // Quiz datas
     const newQuizDetails = req.body.quizDetails
+
     readFile(quizListFile, "utf8").then((data) => {
         const oldQuizList = JSON.parse(data)
         const newQuizList = [...oldQuizList, newQuizCategory]
-        writeFile(quizListFile, JSON.stringify(newQuizList))
+        writeFile(quizListFile, JSON.stringify(newQuizList, null, 2))
+
+        // Create quiz details
+        readFile(quizDatasFile, "utf8").then((data) => {
+            const oldQuizDatas = JSON.parse(data)
+            const newQuizDatas = [...oldQuizDatas, newQuizDetails]
+            writeFile(quizDatasFile, JSON.stringify(newQuizDatas, null, 2))
+            res.send(`Nouveau quiz créé avec succès. Liste de quiz à jour : ${newQuizList, newQuizDatas}`)
+        }).catch((err) => {
+            console.log(err)
+            res.send('Error', err)
+        })
+
     }).catch((err) => {
         console.log(err)
         res.send('Error', err)
-        return
-    }) 
+    })   
 })
-
 
 
 // App listening on port chosen

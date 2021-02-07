@@ -1,30 +1,31 @@
 [
-    {
-        "quizName": "L'Attaque des Titans",
-        "quizLabel": "shingeki-no-kyojin",
-        "caption": "Incollable sur Shingeki no Kyojin ? Tente ta chance !",
-        "image": "shin",
-        "path": "shingeki-no-kyojin"
-    },
-    {
-        "quizName": "Fruits Basket",
-        "quizLabel": "fruits-basket",
-        "caption": "Fan des shojo classiques ? Tente ta chance !",
-        "image": "fruits-basket",
-        "path": "fruits-basket"
-    },
-    {
-        "quizName": "Code Geass",
-        "quizLabel": "code-geass",
-        "caption": "Prêt à défier les britanniens ? Yes, my lord !",
-        "image": "code-geass",
-        "path": "code-geass"
-    },
-    {
-        "quizName": "Death note",
-        "quizLabel": "death-note",
-        "caption": "Réponds aux questions ou ton nom risque d'y être inscrit !",
-        "image": "death-note",
-        "path": "death-note"
-    }
+  {
+    "quizName": "L'Attaque des Titans",
+    "quizLabel": "shingeki-no-kyojin",
+    "caption": "Incollable sur Shingeki no Kyojin ? Tente ta chance !",
+    "image": "shin",
+    "path": "shingeki-no-kyojin"
+  },
+  {
+    "quizName": "Fruits Basket",
+    "quizLabel": "fruits-basket",
+    "caption": "Fan des shojo classiques ? Tente ta chance !",
+    "image": "fruits-basket",
+    "path": "fruits-basket"
+  },
+  {
+    "quizName": "Code Geass",
+    "quizLabel": "code-geass",
+    "caption": "Prêt à défier les britanniens ? Yes, my lord !",
+    "image": "code-geass",
+    "path": "code-geass"
+  },
+  {
+    "quizName": "Death note",
+    "quizLabel": "death-note",
+    "caption": "Réponds aux questions ou ton nom risque d'y être inscrit !",
+    "image": "death-note",
+    "path": "death-note"
+  },
+  "villeo"
 ]
