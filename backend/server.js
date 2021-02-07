@@ -66,7 +66,7 @@ app.get('/quiz-details/:label', function (req, res) {
     }) 
 })
 
-// POST the quiz score to get assessment rate endpoint 
+// CREATE :POST the quiz score to get assessment rate endpoint 
 app.post('/quiz-score', function (req, res) {    
     readFile(quizScoreRate, "utf8").then((data) => {
         const quizScores = JSON.parse(data)
@@ -80,7 +80,7 @@ app.post('/quiz-score', function (req, res) {
     }) 
 })
 
-// POST create a quiz
+// CREATE : POST create a quiz
 app.post('/quiz/create', async function (req, res) { 
     // Quiz category
     const newQuizCategory = req.body.quizCategory
@@ -99,7 +99,7 @@ app.post('/quiz/create', async function (req, res) {
                 const oldQuizDatas = JSON.parse(data)
                 const newQuizDatas = [...oldQuizDatas, newQuizDetails]
                 writeFile(quizDatasFile, JSON.stringify(newQuizDatas, null, 2))
-                res.send(`${newQuizList, newQuizDatas}`)
+                res.send({newQuizCategory : newQuizList, newQuizDetails: newQuizDatas})
             }).catch((err) => {
                 console.log(err)
                 res.send('Error', err)
@@ -109,7 +109,7 @@ app.post('/quiz/create', async function (req, res) {
             res.send('Error', err)
         })   
     } else {
-        res.send('Désolé, vos données envoyées ne correspondent pas aux standards requis pour créer un quiz. Veuillez à envoyer un objet avec les 2 propriétés : quizCategory et quizDetails')
+        res.send('Désolé, vos données envoyées ne correspondent pas aux standards requis pour créer un quiz. Veuillez à envoyer un objet avec les 2 propriétés. : quizCategory et quizDetails')
     }
 })
 
