@@ -70,7 +70,7 @@ app.get('/quiz-details/:label', function (req, res) {
     }) 
 })
 
-// GET the quiz score assessment rate endpoint 
+// POST the quiz score to get assessment rate endpoint 
 app.post('/quiz-score', function (req, res) {    
     readFile(quizScoreRate, "utf8").then((data) => {
         const quizScores = JSON.parse(data)
@@ -84,19 +84,21 @@ app.post('/quiz-score', function (req, res) {
     }) 
 })
 
+// POST create a quiz
+app.post('/quiz/create', async function (req, res) { 
+    const newQuizCategory = req.body.quizCategory
+    const newQuizDetails = req.body.quizDetails
+    readFile(quizListFile, "utf8").then((data) => {
+        const oldQuizList = JSON.parse(data)
+        const newQuizList = [...oldQuizList, newQuizCategory]
+        writeFile(quizListFile, JSON.stringify(newQuizList))
+    }).catch((err) => {
+        console.log(err)
+        res.send('Error', err)
+        return
+    }) 
+})
 
-
-// const quizList = async function promiseReadFile(){
-//     try{ 
-//         const data = await readFile(quizListFile, "utf8");
-//         return JSON.parse(data);
-//     }
-//     catch (err){
-//         return
-//         console.error('Error while reading file', err);
-//         process.exit(1);
-//     }  
-// }
 
 
 // App listening on port chosen
