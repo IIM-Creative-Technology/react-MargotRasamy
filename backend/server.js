@@ -77,6 +77,9 @@ app.post('/quiz-score', function (req, res) {
     }) 
 })
 
+// N.B: Double call back un peu compliqué pour la création du quiz car j'ai séparé l'info principal des détails. 
+// Cela aurait été plus simple de les avoir en un seul fichier json mais je n'ai plus le temps pour améliorer cette architecture.
+
 // CREATE : POST create a quiz
 app.post('/quiz/create', async function (req, res) { 
     // Quiz category
