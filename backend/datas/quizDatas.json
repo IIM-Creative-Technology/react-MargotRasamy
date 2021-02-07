@@ -456,24 +456,222 @@
     "quizLabel": "code-geass",
     "quizDetails": [
       {
-        "question": "Pour quelle raison Eren pleure-t-il au début du manga/animé ?",
+        "question": "Quel est le pouvoir du Geass de Lelouch ?",
+        "answer": "C",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Il peut lire dans les pensées des gens"
+          },
+          {
+            "label": "B",
+            "response": "Il peut arrêter le cours du temps"
+          },
+          {
+            "label": "C",
+            "response": "Il peut donner n'importe quel ordre aux personnes qu'il regarde dans les yeux"
+          },
+          {
+            "label": "D",
+            "response": "Les trois réponses à la fois"
+          }
+        ]
+      },
+      {
+        "question": "Qui est la petite sœur de Lelouch ?",
+        "answer": "C",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Cornelia"
+          },
+          {
+            "label": "B",
+            "response": "Euphemia"
+          },
+          {
+            "label": "C",
+            "response": "Nunnally"
+          },
+          {
+            "label": "D",
+            "response": "Shirley"
+          }
+        ]
+      },
+      {
+        "question": "Qui est surnommé 'Orange' ?",
         "answer": "B",
         "responses": [
           {
             "label": "A",
-            "response": "Il vient de se battre avec des garçons du même âge."
+            "response": "Ôgi Kaname"
           },
           {
             "label": "B",
-            "response": "Il a fait un cauchemar."
+            "response": "Jeremiah Gottwald"
           },
           {
             "label": "C",
-            "response": "Mikasa vient de lui mettre une râclée."
+            "response": "Clovis La Britannia"
           },
           {
             "label": "D",
-            "response": "Ses parents viennent de le remettre en place."
+            "response": "Suzaku Kururugi"
+          }
+        ]
+      },
+      {
+        "question": "Comment s'appelle le chat de Suzaku ?",
+        "answer": "C",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Tristan"
+          },
+          {
+            "label": "B",
+            "response": "Charles"
+          },
+          {
+            "label": "C",
+            "response": "Arthur"
+          },
+          {
+            "label": "D",
+            "response": "Takuto"
+          }
+        ]
+      },
+      {
+        "question": "Qui pilote le Guren ?",
+        "answer": "B",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Suzaku"
+          },
+          {
+            "label": "B",
+            "response": "Kallen"
+          },
+          {
+            "label": "C",
+            "response": "Zero"
+          },
+          {
+            "label": "D",
+            "response": "Cornelia"
+          }
+        ]
+      },
+      {
+        "question": "Où se déroule la première attaque de Lelouch contre l'empire britannien ?",
+        "answer": "B",
+        "responses": [
+          {
+            "label": "A",
+            "response": "À Narita"
+          },
+          {
+            "label": "B",
+            "response": "À Shinjuku"
+          },
+          {
+            "label": "C",
+            "response": "À Kyôto"
+          },
+          {
+            "label": "D",
+            "response": "Au mont Fuji"
+          }
+        ]
+      },
+      {
+        "question": "Quel étudiant de l'académie Ashford est aussi un terroriste membre de l'Ordre des Chevaliers noirs ?",
+        "answer": "A",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Kallen"
+          },
+          {
+            "label": "B",
+            "response": "Suzaku"
+          },
+          {
+            "label": "C",
+            "response": "Milly"
+          },
+          {
+            "label": "D",
+            "response": "Nina"
+          }
+        ]
+      },
+      {
+        "question": "Après la mort du prince Clovis, qui devient gouverneur de la zone 11 ?",
+        "answer": "C",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Nunnally"
+          },
+          {
+            "label": "B",
+            "response": "Schneizel"
+          },
+          {
+            "label": "C",
+            "response": "Cornelia"
+          },
+          {
+            "label": "D",
+            "response": "Euphemia"
+          }
+        ]
+      },
+      {
+        "question": "Qu'est-ce que le Refrain ?",
+        "answer": "D",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Une base militaire britannienne"
+          },
+          {
+            "label": "B",
+            "response": "Un Knightmare"
+          },
+          {
+            "label": "C",
+            "response": "Des papiers officiels"
+          },
+          {
+            "label": "D",
+            "response": "Une sorte de drogue"
+          }
+        ]
+      },
+      {
+        "question": "Comment s'appelle le père de Lelouch ?",
+        "answer": "A",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Charles di Britannia"
+          },
+          {
+            "label": "B",
+            "response": "Clovis la Britannia"
+          },
+          {
+            "label": "C",
+            "response": "Charly vi Britannia"
+          },
+          {
+            "label": "D",
+            "response": "Schneizel el Britannia"
           }
         ]
       }
@@ -484,24 +682,222 @@
     "quizLabel": "death-note",
     "quizDetails": [
       {
-        "question": "Pour quelle raison Eren pleure-t-il au début du manga/animé ?",
+        "question": "Dans quel épisode Ryuk apparaît-il ?",
+        "answer": "C",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Dans le deuxième épisode"
+          },
+          {
+            "label": "B",
+            "response": "Dans le troisième épisode"
+          },
+          {
+            "label": "C",
+            "response": "Dans le premier épisode"
+          },
+          {
+            "label": "D",
+            "response": "Dans aucun des épisodes"
+          }
+        ]
+      },
+      {
+        "question": "Que réplique Light lorsque Ryuk lui dit 'Je ne sais pas si tu es au courant mais c'est autre chose qu'un vieux manuscrit...'",
         "answer": "B",
         "responses": [
           {
             "label": "A",
-            "response": "Il vient de se battre avec des garçons du même âge."
+            "response": "'Seigneur... Toi !'"
           },
           {
             "label": "B",
-            "response": "Il a fait un cauchemar."
+            "response": "'Je savais que tu viendrais, Ryuk. En fait, je t'attendais, Ryuk...'"
           },
           {
             "label": "C",
-            "response": "Mikasa vient de lui mettre une râclée."
+            "response": "'Que fais-tu chez moi ? Comptes-tu me tuer ?'"
           },
           {
             "label": "D",
-            "response": "Ses parents viennent de le remettre en place."
+            "response": "'Ne me fais plus peur ainsi. Compris Ryuk ?'"
+          }
+        ]
+      },
+      {
+        "question": "Qui est réellement Ryuk ?",
+        "answer": "C",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Un mort"
+          },
+          {
+            "label": "B",
+            "response": "Un ange déchu"
+          },
+          {
+            "label": "C",
+            "response": "Un dieu de la mort"
+          },
+          {
+            "label": "D",
+            "response": "Un esprit vengeur"
+          }
+        ]
+      },
+      {
+        "question": "Que dit Light avant la mort de Raye Penber ?",
+        "answer": "C",
+        "responses": [
+          {
+            "label": "A",
+            "response": "'À la prochaine Raye Penber...'"
+          },
+          {
+            "label": "B",
+            "response": "'Nous allons nous revoir en enfer Penber...'"
+          },
+          {
+            "label": "C",
+            "response": "'Adieu Raye Penber...'"
+          },
+          {
+            "label": "D",
+            "response": "Il ne dit rien, ne faisant que le regarder mourir"
+          }
+        ]
+      },
+      {
+        "question": "Qu'est-ce que L dit lorsque le père de Yagami et les autres le rencontrent pour la première fois et qu'ils donnent leurs noms ?",
+        "answer": "B",
+        "responses": [
+          {
+            "label": "A",
+            "response": "'Idiot...'"
+          },
+          {
+            "label": "B",
+            "response": "'Bam..'"
+          },
+          {
+            "label": "C",
+            "response": "'Ne parlez plus ! Sortez !'"
+          },
+          {
+            "label": "D",
+            "response": "'Pourquoi donner vos noms alors qu'un dangereux criminel tue d'un claquement de doigts ?'"
+          }
+        ]
+      },
+      {
+        "question": "Comment le Shinigami de Misa Amane se nomme-t-il ?",
+        "answer": "D",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Ryuk"
+          },
+          {
+            "label": "B",
+            "response": "Mura"
+          },
+          {
+            "label": "C",
+            "response": "Uzo"
+          },
+          {
+            "label": "D",
+            "response": "Rem"
+          }
+        ]
+      },
+      {
+        "question": "Quel était le métier d'Amane Misa ?",
+        "answer": "B",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Danseuse"
+          },
+          {
+            "label": "B",
+            "response": "Mannequin"
+          },
+          {
+            "label": "C",
+            "response": "Serveuse"
+          },
+          {
+            "label": "D",
+            "response": "Chanteuse"
+          }
+        ]
+      },
+      {
+        "question": "Comment Light Yagami est-il mort ?",
+        "answer": "A",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Il a été tué par le Death Note de Ryuk"
+          },
+          {
+            "label": "B",
+            "response": "Il a été tué par le Death Note de Rem"
+          },
+          {
+            "label": "C",
+            "response": "Il s'est suicidé"
+          },
+          {
+            "label": "D",
+            "response": "Il est mort par plusieurs coups de fusil de Matsuda"
+          }
+        ]
+      },
+      {
+        "question": "Comment L est-il mort ?",
+        "answer": "B",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Il a été tué par le Death Note de Ryuk"
+          },
+          {
+            "label": "B",
+            "response": "Il a été tué par le Death Note de Rem"
+          },
+          {
+            "label": "C",
+            "response": "Il n'est pas réellement mort"
+          },
+          {
+            "label": "D",
+            "response": "Il a été tué par Yagami"
+          }
+        ]
+      },
+      {
+        "question": "Comment le père de Light se nomme-t-il ?",
+        "answer": "B",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Koichi Yagami"
+          },
+          {
+            "label": "B",
+            "response": "Soichiro Yagami"
+          },
+          {
+            "label": "C",
+            "response": "Sotchi Yagami"
+          },
+          {
+            "label": "D",
+            "response": "Seichiro Yagami"
           }
         ]
       }
