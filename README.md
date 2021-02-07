@@ -16,7 +16,7 @@ cd backend && npm install
 cd backend && npm start
 ```
 
-### See the website in your browser
+### See the website in your browser / In order to see the quiz, please launch the server, it is necessary.
 
 ```console
 cd frontend && yarn start

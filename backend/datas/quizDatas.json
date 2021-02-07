@@ -68,6 +68,160 @@
             "response": "Voir la mer"
           }
         ]
+      },
+      {
+        "question": "Pour quelle raison les parents de Mikasa ont ils été massacrés et la petite fille enlevée ?",
+        "answer": "A",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Elle est l'une des dernières asiatiques et ces ravisseurs espéraient la vendre à bon prix."
+          },
+          {
+            "label": "B",
+            "response": "Ses parents étaient impliqués dans une sombre affaire de détournement."
+          },
+          {
+            "label": "C",
+            "response": "Ses parents étaient des titans."
+          },
+          {
+            "label": "D",
+            "response": "Elle était censée devenir la nourriture d'un titan spécial"
+          }
+        ]
+      },
+      {
+        "question": "Pour quelle raison Eren ne parvient pas à sauver sa mère ?",
+        "answer": "D",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Elle a été tuée sur le coup, lorsque le titan colossal a brisé le mur."
+          },
+          {
+            "label": "B",
+            "response": "Elle été déjà en cours de 'dégustation' par l'un des titans."
+          },
+          {
+            "label": "C",
+            "response": "Armin s'est opposé à ce qu'Eren et Mikasa retourne chez eux."
+          },
+          {
+            "label": "D",
+            "response": "Les jambes brisées, elle ne peut se sauver et il est contraint d'abandonner."
+          }
+        ]
+      },
+      {
+        "question": "Qu'est ce qui décide Armin à rejoindre l'armée ?",
+        "answer": "A",
+        "responses": [
+          {
+            "label": "A",
+            "response": "La mort de son grand père, forcé à se battre contre les titans en vain."
+          },
+          {
+            "label": "B",
+            "response": "La perte du mur Maria."
+          },
+          {
+            "label": "C",
+            "response": "Le harcèlement d'Eren"
+          },
+          {
+            "label": "D",
+            "response": "Les moqueries des officiers"
+          }
+        ]
+      },
+      {
+        "question": "Au bout de combien d'années le titan colossal réapparaît il ?",
+        "answer": "B",
+        "responses": [
+          {
+            "label": "A",
+            "response": "3 ans"
+          },
+          {
+            "label": "B",
+            "response": "5 ans"
+          },
+          {
+            "label": "C",
+            "response": "7 ans"
+          },
+          {
+            "label": "D",
+            "response": "10 ans"
+          }
+        ]
+      },
+      {
+        "question": "Lors des évaluations de la brigade 104, quel est l'ordre de réussite des candidats ?",
+        "answer": "C",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Mikasa, Berthold, Reiner, Eren, Jean"
+          },
+          {
+            "label": "B",
+            "response": "Mikasa, Reiner, Annie, Berthold, Jean"
+          },
+          {
+            "label": "C",
+            "response": "Mikasa, Reiner, Berthold, Annie, Eren"
+          },
+          {
+            "label": "D",
+            "response": "Mikasa, Berthold, Annie, Reiner, Eren"
+          }
+        ]
+      },
+      {
+        "question": "Qui apprend un mouvement de combat rapide et efficace à Eren lors des entraînements ?",
+        "answer": "B",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Annie"
+          },
+          {
+            "label": "B",
+            "response": "Mikasa"
+          },
+          {
+            "label": "C",
+            "response": "Reiner"
+          },
+          {
+            "label": "D",
+            "response": "Armin"
+          }
+        ]
+      },
+      {
+        "question": "Quel est l'auteur de Shingeki no Kyojin ?",
+        "answer": "D",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Harima Isayama"
+          },
+          {
+            "label": "B",
+            "response": "Harita Isayama"
+          },
+          {
+            "label": "C",
+            "response": "Hajine Isayama"
+          },
+          {
+            "label": "D",
+            "response": "Hajime Isayama"
+          }
+        ]
       }
     ]
   },
@@ -76,24 +230,222 @@
     "quizLabel": "fruits-basket",
     "quizDetails": [
       {
-        "question": "Qui est Tohru Honda ?",
+        "question": "Quel est le 1er maudit que Tohru rencontre ?",
+        "answer": "C",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Shiguré"
+          },
+          {
+            "label": "B",
+            "response": "Kyo"
+          },
+          {
+            "label": "C",
+            "response": "Yuki"
+          },
+          {
+            "label": "D",
+            "response": "Momiji"
+          }
+        ]
+      },
+      {
+        "question": "Dans quel tôme Tohru voit pour la 1ère fois le 3ème aspect de Kyo ?",
         "answer": "B",
         "responses": [
           {
             "label": "A",
-            "response": "Il vient de se battre avec des garçons du même âge."
+            "response": "5"
           },
           {
             "label": "B",
-            "response": "Il a fait un cauchemar."
+            "response": "6"
           },
           {
             "label": "C",
-            "response": "Mikasa vient de lui mettre une râclée."
+            "response": "7"
           },
           {
             "label": "D",
-            "response": "Ses parents viennent de le remettre en place."
+            "response": "8"
+          }
+        ]
+      },
+      {
+        "question": "Le petit garçon à la casquette est Yuki... Mais a qui appartient la casquette ?",
+        "answer": "C",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Yuki"
+          },
+          {
+            "label": "B",
+            "response": "Haru"
+          },
+          {
+            "label": "C",
+            "response": "Kyo"
+          },
+          {
+            "label": "D",
+            "response": "On ne sait pas !"
+          }
+        ]
+      },
+      {
+        "question": "Qui est le 1er amour d´Akito ?",
+        "answer": "B",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Ayame"
+          },
+          {
+            "label": "B",
+            "response": "Shiguré"
+          },
+          {
+            "label": "C",
+            "response": "Kunero"
+          },
+          {
+            "label": "D",
+            "response": "Hatori"
+          }
+        ]
+      },
+      {
+        "question": "Qui prononce cette phrase: 'Quand quelqu'un te dira à quel point il t'apprécie ou qu'il t'aime alors c'est là et seulement à ce moment là que tu pourras t'aimer toi-même. ?",
+        "answer": "A",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Yuki"
+          },
+          {
+            "label": "B",
+            "response": "Shiguré"
+          },
+          {
+            "label": "C",
+            "response": "Tohru"
+          },
+          {
+            "label": "D",
+            "response": "Kyoko (la mère de Tohru)"
+          }
+        ]
+      },
+      {
+        "question": "Qui peut lancer une terrible malédiction sur les gens ?",
+        "answer": "C",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Akito"
+          },
+          {
+            "label": "B",
+            "response": "Hanajima"
+          },
+          {
+            "label": "C",
+            "response": "Mégumi"
+          },
+          {
+            "label": "D",
+            "response": "Mio"
+          }
+        ]
+      },
+      {
+        "question": "Quel est l'être qui est le plus cher pour Tohru ?",
+        "answer": "D",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Kyoko (sa mère)"
+          },
+          {
+            "label": "B",
+            "response": "Katsuya (son père)"
+          },
+          {
+            "label": "C",
+            "response": "Yuki"
+          },
+          {
+            "label": "D",
+            "response": "Kyo"
+          }
+        ]
+      },
+      {
+        "question": "En quelle année Natsuki a créé fruits basket ?",
+        "answer": "D",
+        "responses": [
+          {
+            "label": "A",
+            "response": "1996"
+          },
+          {
+            "label": "B",
+            "response": "1997"
+          },
+          {
+            "label": "C",
+            "response": "1998"
+          },
+          {
+            "label": "D",
+            "response": "1999"
+          }
+        ]
+      },
+      {
+        "question": "Qui est le/la trésorière du conseil des élèves ?",
+        "answer": "A",
+        "responses": [
+          {
+            "label": "A",
+            "response": "Kuragi Machi"
+          },
+          {
+            "label": "B",
+            "response": "Motoko"
+          },
+          {
+            "label": "C",
+            "response": "Tôdô Kimi"
+          },
+          {
+            "label": "D",
+            "response": "Sakuragi Naoto"
+          }
+        ]
+      },
+      {
+        "question": "De quel livre vient l'histoire du voyageur le plus idiot du monde ?",
+        "answer": "B",
+        "responses": [
+          {
+            "label": "A",
+            "response": "101 histoires amusantes"
+          },
+          {
+            "label": "B",
+            "response": "Le monde des soupes"
+          },
+          {
+            "label": "C",
+            "response": "Le voyageur le plus idiot du monde"
+          },
+          {
+            "label": "D",
+            "response": "Il n'y a pas de titre !"
           }
         ]
       }
