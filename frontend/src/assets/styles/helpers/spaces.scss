@@ -13,7 +13,7 @@
     --spaceXL: 64px;
 
     @include large {
-        --marginsLayout: 20vw;
+        --marginsLayout: 5vw;
         --gridColumns: repeat(6, 1fr);
         --gridGap : 20px;
     }

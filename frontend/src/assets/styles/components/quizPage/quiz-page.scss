@@ -17,6 +17,7 @@
             grid-template-columns: repeat(2, 1fr);
             grid-gap: var(--gridGap);
         .response {
+            word-break: break-word;
             border:none;
             cursor: pointer;
             outline: none;
