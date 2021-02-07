@@ -88,13 +88,13 @@ app.post('/quiz/create', async function (req, res) {
     if (newQuizCategory && newQuizDetails) {
         readFile(quizListFile, "utf8").then((data) => {
             const oldQuizList = JSON.parse(data)
-            const newQuizList = [...oldQuizList, newQuizCategory]
-            writeFile(quizListFile, JSON.stringify(newQuizList, null, 2))
+            const newQuizList = [...oldQuizList, newQuizCategory]   
     
             // Create quiz details
             readFile(quizDatasFile, "utf8").then((data) => {
                 const oldQuizDatas = JSON.parse(data)
                 const newQuizDatas = [...oldQuizDatas, newQuizDetails]
+                writeFile(quizListFile, JSON.stringify(newQuizList, null, 2))
                 writeFile(quizDatasFile, JSON.stringify(newQuizDatas, null, 2))
                 res.send({newQuizCategory : newQuizList, newQuizDetails: newQuizDatas})
             }).catch((err) => {
@@ -128,6 +128,21 @@ app.delete('/quiz/delete/:label', function (req, res) {
         }).catch((err) => {
             res.send('Error', err)
         })
+    }).catch((err) => {
+        res.send('Error', err)
+    })
+})
+
+// UPDATE : PUT endpoint to modify the name of the quiz
+app.put('/quiz/changeName/:label', function (req, res) {
+    const newName = req.body.name   
+    readFile(quizDatasFile, "utf8").then((data) => {
+        const quizData = JSON.parse(data)
+        quizData.forEach((quiz) => {
+            quiz.quizLabel === req.params.label ? quiz.quizName = newName : null
+        })
+        writeFile(quizDatasFile, JSON.stringify(quizData, null, 2))
+        res.send('Quiz name has been changed successfully')
     }).catch((err) => {
         res.send('Error', err)
     })
