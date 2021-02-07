@@ -3,28 +3,28 @@
     "quizName": "L'Attaque des Titans",
     "quizLabel": "shingeki-no-kyojin",
     "caption": "Incollable sur Shingeki no Kyojin ? Tente ta chance !",
-    "image": "shin",
+    "image": "attack-titans.jpg",
     "path": "shingeki-no-kyojin"
   },
   {
     "quizName": "Fruits Basket",
     "quizLabel": "fruits-basket",
     "caption": "Fan des shojo classiques ? Tente ta chance !",
-    "image": "fruits-basket",
+    "image": "fruits-basket.jpg",
     "path": "fruits-basket"
   },
   {
     "quizName": "Code Geass",
     "quizLabel": "code-geass",
     "caption": "Prêt à défier les britanniens ? Yes, my lord !",
-    "image": "code-geass",
+    "image": "code-geass.jpg",
     "path": "code-geass"
   },
   {
     "quizName": "Death note",
     "quizLabel": "death-note",
     "caption": "Réponds aux questions ou ton nom risque d'y être inscrit !",
-    "image": "death-note",
+    "image": "death-note.jpg",
     "path": "death-note"
   }
 ]

@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 function QuizCategory({ quiz }) {
     const backgroundImageImport = (imageToLoad) => {
         return { 
-            backgroundImage: `url(${require(`../../assets/images/backgrounds/${imageToLoad}.jpg`).default})`
+            backgroundImage: `url(${require(`../../assets/images/backgrounds/${imageToLoad}`).default})`
         }
     } 
 
