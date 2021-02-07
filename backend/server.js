@@ -42,17 +42,16 @@ const quizListFile = "./datas/quizList.json"
 const quizDatasFile = "./datas/quizDatas.json"
 const quizScoreRate = "./datas/quizScoreRate.json"
 
-// GET the quiz list endpoint
+// READ : GET the quiz list endpoint
 app.get('/quiz-list', function (req, res) {
     readFile(quizListFile, "utf8").then((data) => {
         res.send(JSON.parse(data))
-    }).catch((err) => {
-        console.log(err)
+    }).catch((err) => {  
         res.send('Error', err)
     })   
 })
 
-// GET the quiz details endpoint 
+// READ : GET the quiz details endpoint 
 app.get('/quiz-details/:label', function (req, res) {    
     readFile(quizDatasFile, "utf8").then((data) => {
         const quizDatas = JSON.parse(data)
@@ -61,12 +60,11 @@ app.get('/quiz-details/:label', function (req, res) {
         )
         res.send(quiz)
     }).catch((err) => {
-        console.log(err)
         res.send('Error', err)
     }) 
 })
 
-// CREATE :POST the quiz score to get assessment rate endpoint 
+// CREATE : POST the quiz score to get assessment rate endpoint 
 app.post('/quiz-score', function (req, res) {    
     readFile(quizScoreRate, "utf8").then((data) => {
         const quizScores = JSON.parse(data)
@@ -75,7 +73,6 @@ app.post('/quiz-score', function (req, res) {
         )
         res.send(quizAssessementData)
     }).catch((err) => {
-        console.log(err)
         res.send('Error', err)
     }) 
 })
@@ -101,16 +98,39 @@ app.post('/quiz/create', async function (req, res) {
                 writeFile(quizDatasFile, JSON.stringify(newQuizDatas, null, 2))
                 res.send({newQuizCategory : newQuizList, newQuizDetails: newQuizDatas})
             }).catch((err) => {
-                console.log(err)
                 res.send('Error', err)
             })
         }).catch((err) => {
-            console.log(err)
             res.send('Error', err)
         })   
     } else {
         res.send('Désolé, vos données envoyées ne correspondent pas aux standards requis pour créer un quiz. Veuillez à envoyer un objet avec les 2 propriétés. : quizCategory et quizDetails')
     }
+})
+
+// DELETE : DELETE endpoint to delete a quiz
+app.delete('/quiz/delete/:label', function (req, res) {   
+    // Delete quiz category 
+    readFile(quizListFile, "utf8").then((data) => {
+        const quizList = JSON.parse(data)
+        const newQuizList = quizList.filter((quiz) => 
+            quiz.quizLabel !== req.params.label
+        )
+        // Delete quiz datas
+        readFile(quizDatasFile, "utf8").then((data) => {
+            const quizData = JSON.parse(data)
+            const newQuizData = quizData.filter((quiz) => 
+                quiz.quizLabel !== req.params.label
+            )
+            writeFile(quizListFile, JSON.stringify(newQuizList, null, 2))
+            writeFile(quizDatasFile, JSON.stringify(newQuizData, null, 2))
+            res.send(`Quiz ${req.params.label} deleted successfully !`)
+        }).catch((err) => {
+            res.send('Error', err)
+        })
+    }).catch((err) => {
+        res.send('Error', err)
+    })
 })
 
 
