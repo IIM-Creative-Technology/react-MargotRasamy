@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import LoaderSpinner from '../LoaderSpinner'
+import { NavLink } from 'react-router-dom'
 
 function QuizScore({userScore, scoreRatio}) {
     const [finalAssessment, setAssessment] = useState(null);
@@ -30,7 +31,8 @@ function QuizScore({userScore, scoreRatio}) {
             : <>
                 <h1>Quiz fini !</h1>
                 <h2>{scoreCalcul()} / 100</h2>
-                <p class="assessment">{finalAssessment}</p>
+                <p className="assessment">{finalAssessment}</p>
+                <NavLink exact to="/" className="cta">Essayer un autre quiz</NavLink>
             </>
         }          
     </div>

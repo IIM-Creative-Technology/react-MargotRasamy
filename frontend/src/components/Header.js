@@ -18,8 +18,8 @@ function Header() {
 
     return (
     <header className="header" ref={headerElement}>
-        <Link to="/" className="nav-link" exact>OtaKuiz</Link>
-        <Link to="#quiz-list" className={`nav-link cta ${hoverClass}`} exact>Le challenge expert</Link>
+        <Link to="/" className="nav-link">OtaKuiz</Link>
+        <Link to="#quiz-list" className={`nav-link cta ${hoverClass}`}>Le challenge expert</Link>
     </header>
     );
 }

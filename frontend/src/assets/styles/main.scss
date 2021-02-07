@@ -16,6 +16,9 @@
 @import 'components/quizPage/quiz-page.scss';
 @import 'components/quizPage/quiz-score.scss';
 
+
+// Main global style
+
 html::-webkit-scrollbar {
   width: 10px;
   background-color: var(--colorSecondaryVeryLight); 
@@ -28,6 +31,7 @@ html::-webkit-scrollbar-thumb {
 html {
   margin:0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 .App {
@@ -46,4 +50,18 @@ html {
   margin: auto;
   width: stretch;
   height: stretch;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }

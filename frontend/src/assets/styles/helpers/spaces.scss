@@ -14,7 +14,7 @@
 
     @include large {
         --marginsLayout: 5vw;
-        --gridColumns: repeat(6, 1fr);
+        --gridColumns: repeat(4, 1fr);
         --gridGap : 20px;
     }
     @include small {

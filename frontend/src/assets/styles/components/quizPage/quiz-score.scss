@@ -1,6 +1,23 @@
 .quiz-score {
     text-align: center;
+    display: flex;
+    flex-direction: column;
     .assessment {
         font-size: 21px;
+        margin: 0 10%;
+    }
+    .cta {
+        margin: var(--spaceL) auto;
+        text-align: center;
+        color: var(--colorWhite);
+        text-decoration: none;
+        font-size: 18px;
+        padding: var(--spaceS) var(--spaceL);
+        border-radius: var(--borderRadiusLarge);
+        border: 2.5px solid var(--colorSecondary);
+            &:hover {
+                color: var(--colorWhite);
+                background-color: var(--colorSecondary);
+        } 
     }
 }
