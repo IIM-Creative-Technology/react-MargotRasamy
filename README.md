@@ -1,11 +1,10 @@
 # Quiz bot
 ## A ERN Stack (Express - Reactjs - Nodejs) quiz app by Margot Rasamy.
 
-P.S: As the quiz datas are linked to the backend API, it would be a little more complicated to deploy the whole project on Netlify.
-Please, test the project on your local while lauching the backend server and the front project at the same time for a nice quiz experience.
+P.S: The quiz datas are linked to the backend API that I also deployed with Heroku.
 
 ### Deployed website : 
-https://otakuiz.netlify.app/ (Please run the backend API first to see quiz !)
+https://otakuiz.netlify.app/
 
 ### Clone the project and enter the directory
 ```console
