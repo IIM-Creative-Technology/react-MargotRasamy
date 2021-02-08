@@ -11,7 +11,7 @@ function QuizPage({match}) {
     const [userFinalScore, setUserScore] = useState(0);
 
     useEffect(() => {
-        axios.get(`http://localhost:1234/quiz-details/${quizParams}`).then(res => {
+        axios.get(`https://otakuiz.herokuapp.com/quiz-details/${quizParams}`).then(res => {
             setQuizDatas(res.data)
             console.log(res.data)
         })

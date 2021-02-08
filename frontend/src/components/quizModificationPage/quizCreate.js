@@ -8,7 +8,7 @@ function QuizCreate() {
 
   useEffect(() => {
     // POST method to create new quiz creation : new form and page to implement
-    axios.post('http://localhost:1234/quiz/create',
+    axios.post('https://otakuiz.herokuapp.com/quiz/create',
     {
       quizCategory : {
         "quizName": "Fullmetal alchemist",

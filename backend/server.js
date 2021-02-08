@@ -8,7 +8,7 @@ const fs = require("fs");
 app.use(express.json());
 
 // Server running on port 1234
-const PORT = 1234;
+const PORT = process.env.PORT || 1234;
 
 // Method to read files with options : utf-8 or other encoding
 const readFile = (fileName, option) => {

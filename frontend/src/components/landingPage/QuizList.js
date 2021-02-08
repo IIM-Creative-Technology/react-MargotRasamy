@@ -7,7 +7,7 @@ function QuizList() {
   const [quizList, setQuizList] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:1234/quiz-list').then(res => {
+    axios.get('https://otakuiz.herokuapp.com/quiz-list').then(res => {
       setQuizList(res.data)
     })
   }, []);

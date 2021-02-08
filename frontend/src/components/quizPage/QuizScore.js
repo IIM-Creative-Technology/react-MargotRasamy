@@ -7,7 +7,7 @@ function QuizScore({userScore, scoreRatio}) {
     const [finalAssessment, setAssessment] = useState(null);
 
     useEffect(() => {
-        axios.post('http://localhost:1234/quiz-score/', { finalScore : scoreCalcul() }).then(res => {
+        axios.post('https://otakuiz.herokuapp.com/quiz-score/', { finalScore : scoreCalcul() }).then(res => {
             setAssessment(res.data.assessment)
         })
     }, []);
